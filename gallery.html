@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@400..700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    @media (max-width:700px) {
+        .contain{
+            display: none;
+        }
+    }
+    html,body{
+        background-color:navy;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        text-align: center;
+        align-items: center;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        position: relative;
+    }
+    h1{
+        margin-top: 20px;
+        font-family: 'Bona Nova SC',sans-serif;
+    }
+    .parent{
+        position: fixed;
+        position: relative;
+        width: 100%;
+        height: 89%;
+        background-color: skyblue;
+        /* background-color: white; */
+        color:white;
+        margin-top: 10px;
+        /* overflow: scroll;
+        display: flex; */
+        flex-direction: column;
+        overflow: scroll;
+    }
+    .image{
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        margin-left: 35px;
+        margin-top: 20px;
+    }
+    .image:hover{
+        animation-name: round;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes rotate {
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes round {
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+    td h3{
+        font-family: 'dancing script',sans-serif;
+        color: rgb(85, 23, 209);
+        text-shadow: 2px 2px 2px rgba(1,232,1,0.5);
+    }
+    table{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .mountain-cards, .temple-cards, .wildlife-cards, .island-cards, .fort-cards, .monument-cards {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        color: black;
+        margin-bottom: 50px;
+        margin-top: 40px;
+    }
+    
+    .card {
+        background-color: white;
+        width: 300px;
+        margin: 15px;
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition-property: all;
+        transition-duration: 0.5s;
+        transition-delay: 0s;
+        transition-timing-function: ease-in-out;
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .card:hover{
+        transform: scale(1.2,1.2);
+    }
+    
+    .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        margin-bottom: 15px;
+    }
+    
+    .card h3 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+    }
+    
+    .card p {
+        font-size: 1.1em;
+    }
+    .main{
+        margin-top: 80px;
+        color: brown;
+       
+    }
+    .main h2{
+        font-family: 'Orbitron',sans-serif;
+    }
+    footer {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    footer .social-media a {
+        color: white;
+        margin: 0px 10px;
+        text-decoration: none;
+        font-size: 1.2em;
+    }
+</style>
+<body>
+    <h1 style="color: bisque;">Popular Tourist Destination</h1><br>
+    <hr width="38%">
+    <div class="parent">
+        <div class="contain">
+                <table>
+                    <tr>
+                        <th><a href="#mountain"><img src="nanda.jpg" alt="" class="image"></th></a>
+                        <th><a href="#temple"><img src="Kedarnath_Temple_in_Rainy_season.jpg" alt="" class="image"></th></a>
+                        <th><a href="#wildlife"><img src="Kaziranga-National-Park-Assam.webp" alt="" class="image"></th></a>
+                        <th><a href="#island"><img src="lakshadweep-islands-2.jpg" alt="" class="image"></th></a>
+                        <th><a href="#fort"><img src="golconda-fort-hyderabad-secunderabad-telangana-2-musthead-hero.jpeg" alt="" class="image"></th></a>
+                        <th><a href="#monument"><img src="gateway-of-india-mumbai-maharashtra-2-attr-hero.jpeg" alt="" class="image"></th></a>
+                        <!-- <th><img src="taj.jpg" alt="" class="image"></th> -->
+                    </tr>
+                    <tr>
+                        <td><h3 style="margin-top: 10px;margin-left: 15px;">Top Mountains in India</h3></td>
+                        <td><h3 style="margin-top: 10px;margin-left: 15px;">Top Temples in India</h3></td>
+                        <td><h3 style="margin-top: 10px;margin-left: 15px;">Wildlife and Safari in India</h3></td>
+                        <td><h3 style="margin-top: 10px;margin-left: 15px;">Top Islands in India</h3></td>
+                        <td><h3 style="margin-top: 10px;margin-left: 15px;">Top Forts in India</h3></td>
+                        <td><h3 style="margin-top: 10px;margin-left: 15px;">Hitorical Monuments in India</h3></td>
+                    </tr>
+                </table>
+            </div>
+                <section id="mountain" class="main">
+                    <h2>Top Mountains in India</h2>
+                    <div class="mountain-cards">
+                        <div class="card">
+                            <img src="kanchan.jpg" alt=" ">
+                            <h3>Kangchenjunga</h3>
+                            <p>Situated in Sikkim, Kangchenjunga offers breathtaking views and trekking opportunities. Visitors can explore its serene landscapes, visit Tsomgo Lake, and enjoy the unique blend of culture and natural beauty.</p>
+                        </div>
+                        <div class="card">
+                            <img src="nanda.jpg" alt=" ">
+                            <h3>Nanda Devi</h3>
+                            <p>Located in Uttarakhand, Nanda Devi is famous for its trekking routes, including the Nanda Devi Sanctuary trek. The region’s stunning beauty and spiritual significance attract adventurers and nature lovers alike.</p>
+                        </div>
+                        <div class="card">
+                            <img src="mountabu.webp" alt=" ">
+                            <h3>Mount Abu</h3>
+                            <p>Mount Abu, Rajasthan’s only hill station, offers a cool escape from the desert heat. Visitors can explore the Dilwara Temples, Nakki Lake, and enjoy panoramic views from Sunset Point.</p>
+                        </div>
+                        <div class="card">
+                            <img src="munnar.avif" alt=" ">
+                            <h3>Munnar
+                            </h3>
+                            <p>Located in Kerala, Munnar is a popular mountain retreat known for its tea plantations, lush greenery, and trekking trails. Visitors can explore Eravikulam National Park and enjoy the scenic beauty of Anamudi Peak.</p>
+                        </div>
+                    </div>
+                </section>
+                <section id="temple" class="main">
+                    <h2>Top Temples in India</h2>
+                    <div class="temple-cards">
+                        <div class="card">
+                            <img src="venketesh.jpg" alt=" ">
+                            <h3>Sri Venkateswara Temple</h3>
+                            <p>Located in Tirumala, Andhra Pradesh, this temple dedicated to Lord Venkateswara is one of the richest and most visited pilgrimage sites in India, attracting millions annually for its spiritual significance.</p>
+                        </div>
+                        <div class="card">
+                            <img src="1280px-Shri_Jagannatha_Temple-1024x682.webp" alt=" ">
+                            <h3>Jagannath Puri Mandir</h3>
+                            <p>Located in Odisha, the Jagannath Temple is one of the Char Dham pilgrimage sites. It’s famous for the annual Rath Yatra and is dedicated to Lord Jagannath, along with Balabhadra and Subhadra.p>
+                        </div>
+                        <div class="card">
+                            <img src="Ayodhya_Ram_Mandir_Inauguration_Day_Picture.jpg.webp" alt=" ">
+                            <h3>Ayodhya Ram Mandir</h3>
+                            <p>The Ram Mandir in Ayodhya, Uttar Pradesh, is dedicated to Lord Ram. After decades of legal and political battles, it was constructed as a symbol of faith and cultural heritage.</p>
+                        </div>
+                        <div class="card">
+                            <img src="640px-The_Golden_Temple_of_Amrithsar_7.jpg" alt=" ">
+                            <h3>Golden Temple (Harmandir Sahib)
+                            </h3>
+                            <p>In Amritsar, Punjab, the Golden Temple is the holiest Gurdwara in Sikhism. Its serene atmosphere, sacred pool, and spiritual ambiance make it a major pilgrimage destination for millions worldwide.</p>
+                        </div>
+                    </div>
+                </section>
+                <section id="wildlife" class="main">
+                    <h2>Wildlife and Safari in India</h2>
+                    <div class="wildlife-cards">
+                        <div class="card">
+                            <img src="CORBETT-NATIONAL-PARK.webp" alt=" ">
+                            <h3>Jim Corbett National Park</h3>
+                            <p>Located in Uttarakhand, Jim Corbett is India’s oldest national park, known for its Bengal tiger population. Visitors can enjoy safaris, birdwatching, and beautiful landscapes in this wildlife sanctuary.</p>
+                        </div>
+                        <div class="card">
+                            <img src="Ranthambore-National-Park.webp" alt=" ">
+                            <h3>Ranthambhore National Park</h3>
+                            <p>In Rajasthan, Ranthambhore is famous for its large tiger population and historical ruins. It offers a thrilling safari experience, where visitors can spot tigers, leopards, and various wildlife species.p>
+                        </div>
+                        <div class="card">
+                            <img src="Kaziranga-National-Park-Assam.webp" alt=" ">
+                            <h3>Kaziranga National Park</h3>
+                            <p>In Assam, Kaziranga is a UNESCO World Heritage Site known for its one-horned rhinoceros. The park’s safaris allow visitors to explore diverse wildlife, including tigers, elephants, and various bird species.</p>
+                        </div>
+                        <div class="card">
+                            <img src="white-bengal-tigers-768x504-1.jpg" alt=" ">
+                            <h3>Sundarbans National Park
+                            </h3>
+                            <p>Located in West Bengal, Sundarbans is famous for its mangrove forests and Royal Bengal tigers. Boat safaris through the swampy landscape provide a unique opportunity to witness this unique ecosystem.</p>
+                        </div>
+                    </div>
+                </section>
+                <section id="island" class="main">
+                    <h2>Top Islands in India</h2>
+                    <div class="island-cards">
+                        <div class="card">
+                            <img src="andaman.jpeg" alt=" ">
+                            <h3>Andaman and Nicobar Islands</h3>
+                            <p>Located in the Bay of Bengal, these islands offer stunning beaches, clear waters, and vibrant marine life. Popular for water sports, they also have rich history and diverse wildlife.</p>
+                        </div>
+                        <div class="card">
+                            <img src="kochi.jpg" alt=" ">
+                            <h3>Kochi Islands (Vypin, Bolgatty, etc.)</h3>
+                            <p>In Kerala, Kochi’s islands boast colonial architecture, backwaters, and beautiful beaches. Vypin Island is famous for its lighthouse, while Bolgatty Island features a heritage palace and scenic views.</p>
+                        </div>
+                        <div class="card">
+                            <img src="lakshadweep-islands-2.jpg" alt=" ">
+                            <h3>Lakshadweep Islands</h3>
+                            <p>This archipelago in the Arabian Sea is known for its pristine coral reefs, turquoise waters, and serene beaches. Ideal for water sports, diving, and relaxing, Lakshadweep is a tropical paradise.
+                            </p>
+                        </div>
+                        <div class="card">
+                            <img src="havelock.jpg" alt=" ">
+                            <h3>Havelock Island
+                            </h3>
+                            <p>Part of the Andaman Islands, Havelock is famous for its white sandy beaches like Radhanagar Beach. Ideal for diving, snorkeling, and exploring lush forests, it's perfect for adventure and relaxation.</p>
+                        </div>
+                    </div>
+                </section>
+                <section id="fort" class="main">
+                    <h2>Top Forts in India</h2>
+                    <div class="fort-cards">
+                        <div class="card">
+                            <img src="Red-Fort-Old-Delhi-India.webp" alt=" ">
+                            <h3>Red Fort</h3>
+                            <p>Located in Delhi, the Red Fort is a UNESCO World Heritage Site known for its Mughal architecture and historical significance. It served as the residence of Mughal emperors for centuries.</p>
+                        </div>
+                        <div class="card">
+                            <img src="mehrangarh.jpg" alt=" ">
+                            <h3>Mehrangarh Fort</h3>
+                            <p>In Jodhpur, Rajasthan, Mehrangarh Fort stands on a 150-meter high hill, offering stunning views. Its museum houses artifacts, while its architecture reflects the grandeur of Rajasthan's royal history.</p>
+                        </div>
+                        <div class="card">
+                            <img src="chiit.jpg" alt=" ">
+                            <h3>Chittorgarh Fort</h3>
+                            <p>A UNESCO World Heritage Site, Chittorgarh Fort in Rajasthan is known for its massive walls and historical significance. It symbolizes Rajput valor and is famous for its architectural beauty and history.</p>
+                        </div>
+                        <div class="card">
+                            <img src="golconda-fort-hyderabad-secunderabad-telangana-2-musthead-hero.jpeg" alt=" ">
+                            <h3>Golconda Fort
+                            </h3>
+                            <p>In Hyderabad, Telangana, Golconda Fort is a massive, ancient fortress known for its acoustics, engineering, and the diamond trade history. It offers panoramic views of the city and surrounding landscape.</p>
+                        </div>
+                    </div>
+                </section>
+                <section id="monument" class="main">
+                    <h2>Historical Monuments in India</h2>
+                    <div class="monument-cards">
+                        <div class="card">
+                            <img src="taj.jpg" alt=" ">
+                            <h3>Taj Mahal</h3>
+                            <p>Located in Agra, the Taj Mahal is a UNESCO World Heritage Site and a symbol of love. This stunning white marble mausoleum, built by Emperor Shah Jahan, is an architectural marvel.</p>
+                        </div>
+                        <div class="card">
+                            <img src="qutub.jpg" alt=" ">
+                            <h3>Qutub Minar</h3>
+                            <p>In Delhi, the Qutub Minar stands as the tallest brick minaret in the world. This 12th-century monument is a masterpiece of Indo-Islamic Afghan architecture and a UNESCO World Heritage Site.</p>
+                        </div>
+                        <div class="card">
+                            <img src="gateway-of-india-mumbai-maharashtra-2-attr-hero.jpeg" alt=" ">
+                            <h3>Gateway Of India</h3>
+                            <p>In Mumbai, the Gateway of India is an iconic arch built in 1924. This monument commemorates the visit of King George V and Queen Mary and symbolizes India's colonial history.</p>
+                        </div>
+                        <div class="card">
+                            <img src="fatehpur-sikri.jpg" alt=" ">
+                            <h3>Fatehpur Sikri
+                            </h3>
+                            <p>Located near Agra, Fatehpur Sikri is a UNESCO World Heritage Site built by Emperor Akbar. It’s known for its mix of Persian, Mughal, and Indian architecture, and historical significance.</p>
+                        </div>
+                    </div>
+                </section>
+                <footer>
+                    <p>&copy; 2025 India Tourism. All Rights Reserved.</p>
+                    <div class="social-media">
+                        <a href="https://www.instagram.com/indiatourism"><i class="ri-instagram-line" style="color: pink;font-size: 30px;"></i></a>
+                        <a href="https://www.facebook.com/indiatourism"><i class="ri-facebook-circle-fill" style="color: rgb(22, 22, 94);font-size: 30px;"></i></a>
+                    </div>
+                </footer>
+    </div>
+  
+   
+ 
+</body>
+</html>
